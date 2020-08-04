@@ -42,7 +42,7 @@ Change variables in main() function:
 area_hh = 1
 area_sj = 4
 ```
-Find more information:
+Get more information:
  * [Headhunter API](https://github.com/hhru/api/blob/master/docs/areas.md);  
  * [SuperJob API](https://api.superjob.ru/#townlist).
 
