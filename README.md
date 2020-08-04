@@ -1,1 +1,0 @@
-# dvmn_salary
