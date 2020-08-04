@@ -39,8 +39,8 @@ python main.py
 You can change area(city, region) for searching vacancies.
 Change variables in main() function:
 ```
-area_hh = 1  # Moscow
-area_sj = 4  # Moscow	
+area_hh = 1
+area_sj = 4
 ```
 Find more information:
  * [Headhunter API](https://github.com/hhru/api/blob/master/docs/areas.md);  
