@@ -25,10 +25,13 @@ def get_top_languages(languages, area):
 def predict_salary(payment_from, payment_to):
     if payment_from != 0 and payment_to != 0:
         return (payment_from + payment_to) / 2
+    
     if payment_from != 0 and payment_to == 0:
         return payment_from * 1.2
+    
     if payment_from == 0 and payment_to != 0:
         return payment_to * 0.8
+    
     return None
 
 
@@ -68,15 +71,17 @@ def count_vacancies_hh(top_languages, area):
 
             if response_hh['pages'] == page + 1:
                 break
+
         try:
             average_salary = int(salary_amount / vacancies_processed)
         except ZeroDivisionError:
             average_salary = 0
             vacancies_processed = 0
+
         data_languages_hh.update({language:
-                                      {'vacancies_found': response_hh['found'],
-                                       'average_salary': average_salary,
-                                       'vacancies_processed': vacancies_processed}})
+                                 {'vacancies_found': response_hh['found'],
+                                  'average_salary': average_salary,
+                                  'vacancies_processed': vacancies_processed}})
     return sorted(data_languages_hh.items(), key=lambda x: x[1]['average_salary'], reverse=True)
 
 
@@ -117,6 +122,7 @@ def count_vacancies_sj(top_languages, superjob_token, area_sj):
         except ZeroDivisionError:
             average_salary = 0
             vacancies_processed = 0
+            
         data_languages_sj.update({language:
                                  {'vacancies_found': response_superjob['total'],
                                   'average_salary': average_salary,
