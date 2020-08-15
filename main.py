@@ -80,7 +80,7 @@ def count_vacancies_hh(top_languages, area):
                                  {'vacancies_found': response_hh['found'],
                                   'average_salary': average_salary,
                                   'vacancies_processed': vacancies_processed}})
-    print(data_languages_hh)
+
     return OrderedDict(sorted(data_languages_hh.items(), key=lambda x: x[1]['average_salary'], reverse=True))
 
 
